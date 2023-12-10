@@ -1,7 +1,7 @@
 import { convertTextToList } from '../utils/convertTextToList';
 
-const calculateCalibration = (dataFile: string) => {
-  const list = convertTextToList(dataFile);
+const calculateCalibration = (inputData: string) => {
+  const list = convertTextToList(inputData);
 
   return list.reduce(
     (sum, line, i) => {

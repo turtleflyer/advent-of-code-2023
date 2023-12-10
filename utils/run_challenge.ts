@@ -1,5 +1,5 @@
-import { argv, cwd } from 'node:process';
 import { resolve } from 'node:path';
+import { argv, cwd } from 'node:process';
 
 const toRun = async () => {
   const [nChall] = argv.slice(2);
@@ -9,8 +9,8 @@ const toRun = async () => {
     dataFile: string
   ) => void;
 
-  const dataFile = resolve(cwd(), folderName, './data');
-  console.log(`Answer to challenge #${nChall} is: `, runChallenge(dataFile));
+  const inputData = resolve(cwd(), folderName, './input.txt');
+  console.log(`Answer to challenge #${nChall} is: `, runChallenge(inputData));
 };
 
 toRun();

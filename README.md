@@ -26,7 +26,7 @@ npm ci
 To reveal the answers to the challenges, simply run:
 
 ```bash
-ts-node utils/run_challenge.ts {# of challenge}
+npm start {# of challenge}
 ```
 
 Replace `{# of challenge}` with the day's challenge number.
