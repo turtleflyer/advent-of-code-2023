@@ -26,14 +26,14 @@ npm ci
 To reveal the answers to the challenges, simply run:
 
 ```bash
-npm start {# of challenge}
+npm start -- -- (--day|-d) N_OF_DAY [(--part|-p) N_OF_PART]
 ```
 
-Replace `{# of challenge}` with the day's challenge number.
+Replace `N_OF_DAY` with the day's challenge number, the same goes for the part number.
 
 0004. **Spread the Joy:**
 
-Feel free to explore, learn, and share the festive spirit by adding your own solutions or
+Feel free to explore, learn, and share the festive spirit by adding your solutions or
 improvements. Contributions are like little ornaments that make this repository shine even brighter!
 🌟
 

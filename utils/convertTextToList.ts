@@ -1,7 +1,10 @@
 import { readFileSync } from 'node:fs';
 
 export const convertTextToList = (filePath: string) => {
-  const list = readFileSync(filePath, { encoding: 'utf8' }).split(/[\r\n]+/);
+  const input = readFileSync(filePath, { encoding: 'utf8' });
+
+  const list = input.split(/[\r\n]+/);
+
   /**
    * Remove a possible empty last line
    */

@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./utils/run_challenge.ts"
+    "start": "ts-node ./utils/run-challenge.ts"
   },
   "keywords": [],
   "author": "",
