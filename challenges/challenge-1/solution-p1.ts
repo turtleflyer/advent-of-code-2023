@@ -1,4 +1,4 @@
-import { convertTextToList } from '../utils/convertTextToList';
+import { convertTextToList } from '../../utils/convertTextToList';
 
 const calculateCalibration = (inputFilePath: string) => {
   const list = convertTextToList(inputFilePath);

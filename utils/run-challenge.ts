@@ -15,7 +15,7 @@ const toRun = async () => {
       )
   );
 
-  const folderName = `./challenge-${dayN}`;
+  const folderName = `./challenges/challenge-${dayN}`;
 
   const filePath = (
     partN === '1' || partN == null

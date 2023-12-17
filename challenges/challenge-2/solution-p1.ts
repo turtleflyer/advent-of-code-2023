@@ -1,5 +1,5 @@
 import { assert } from 'console';
-import { convertTextToList } from '../utils/convertTextToList';
+import { convertTextToList } from '../../utils/convertTextToList';
 
 const CONFIG = { red: 12, green: 13, blue: 14 };
 

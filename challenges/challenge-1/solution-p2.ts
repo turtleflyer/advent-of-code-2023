@@ -1,4 +1,4 @@
-import { convertTextToList } from '../utils/convertTextToList';
+import { convertTextToList } from '../../utils/convertTextToList';
 
 const replacePairs = [
   ['one', 1],
