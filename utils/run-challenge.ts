@@ -37,11 +37,10 @@ const toRun = async () => {
   const runChallenge = (await import(filePath)).default as (dataFile: string) => void;
 
   const inputData = resolve(cwd(), folderName, './input');
+  const partNIndeed = filePath.replace(/.*solution-p(\d+).*/, '$1');
 
   console.log(
-    `Answer to challenge of day ${dayN}${
-      /solution-p/.test(filePath) ? ` (part ${partN})` : ''
-    } is: `,
+    `Answer to challenge of day ${dayN}${partNIndeed ? ` (part ${partNIndeed})` : ''} is:`,
     runChallenge(inputData)
   );
 };
