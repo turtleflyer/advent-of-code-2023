@@ -36,7 +36,7 @@ const toRun = async () => {
 
   const runChallenge = (await import(filePath)).default as (dataFile: string) => void;
 
-  const inputData = resolve(cwd(), folderName, './input.txt');
+  const inputData = resolve(cwd(), folderName, './input');
 
   console.log(
     `Answer to challenge of day ${dayN}${
