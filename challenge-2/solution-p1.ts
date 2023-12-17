@@ -19,7 +19,7 @@ const determineValidGames = (inputFilePath: string) => {
 
       if (!patternResult) break;
 
-      wasPatternSearchWasValid(i, patternResult);
+      wasPatternSearchValid(i, patternResult);
       n = parseInt(patternResult[0]);
       key = patternResult[1];
 
@@ -38,7 +38,7 @@ const determineValidGames = (inputFilePath: string) => {
   return count;
 };
 
-function wasPatternSearchWasValid(
+function wasPatternSearchValid(
   lineN: number,
   result: RegExpExecArray
 ): asserts result is RegExpExecArray & [`${number}`, 'red' | 'green' | 'blue' | undefined] {
