@@ -15,9 +15,9 @@
       "args": [
         "utils/run-challenge.ts",
         "-d",
-        "4",
+        "5",
         "-p",
-        "2"
+        "1"
       ]
     }
   ]
