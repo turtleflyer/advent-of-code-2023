@@ -1,42 +1,25 @@
 import { convertTextToList } from '../../utils/convertTextToList';
+import { goThroughCards } from './goThroughCards';
 
 const calculateWinPoints = (inputFilePath: string) => {
   const list = convertTextToList(inputFilePath);
+  let rank = 0;
   let sum = 0;
 
-  list.forEach((line) => {
-    const [, _wins, _draw] = line.split(/Card\s+\d+:\s+| \| /);
-    const [wins, draw] = [_wins, _draw].map((nums) => nums.split(/\s+/));
-    const drawSet = new Set<string>();
-    let index = 0;
-    let rank = 0;
+  goThroughCards(
+    list,
 
-    const increaseRank = () => {
-      rank = Math.max(rank, 1 / 2) * 2;
-    };
+    {
+      winProc: () => {
+        rank = Math.max(rank, 1 / 2) * 2;
+      },
 
-    wins.forEach((n) => {
-      if (drawSet.has(n)) {
-        increaseRank();
-
-        return;
-      }
-
-      while (index < draw.length) {
-        const newN = draw[index];
-        index++;
-        drawSet.add(newN);
-
-        if (n === newN) {
-          increaseRank();
-
-          return;
-        }
-      }
-    });
-
-    sum += rank;
-  });
+      linePostProc: () => {
+        sum += rank;
+        rank = 0;
+      },
+    }
+  );
 
   return sum;
 };
